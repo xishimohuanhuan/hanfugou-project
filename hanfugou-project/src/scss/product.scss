@@ -1,0 +1,203 @@
+/* 写萌物库 */
+/* 引入主页要用的样式 */
+@import "./component/header.scss";
+@import "./component/footer.scss";
+@import "./component/style.scss";
+
+/* 写萌物库的样式 */
+$width:1100px;
+.start-change{
+	width: 100%;
+	background-color: #f6f6f6;
+	padding-top: 20px;
+	.start-change-wrap{
+		width: $width;
+		height: 482px;
+		background-color: #fff;
+		overflow:hidden;
+		margin: 0 auto;
+		.start-inn-wrap{
+			width: 1021px;
+			height: 478px;
+			overflow:hidden;
+			/* margin-top: 26px; */
+			margin-left: 41px;
+			.change-one{
+				width: 100%;
+				padding-top: 25px;
+				padding-bottom: 29px;
+				background:url(/images/30.png) no-repeat 0 25px;
+				border-bottom:1px dashed #ddd;
+				.w-type{
+					margin-left: 105px;
+					margin-top:10px;
+					font-size:13px;
+					height: 13px;
+					.w-type-main{
+						color:#555;
+						display:inline-block;
+						width: 78px;
+						text-align:right;
+					}
+					.type{
+						display: inline-block;
+						a{
+							margin-left: 30px;
+							color: #999;
+						}
+					}
+				}
+				.w-type-only{
+					margin-left: 105px;
+					margin-top:29px;
+					font-size:13px;
+					height: 13px;
+					.w-type-main{
+						color:#555;
+						display:inline-block;
+						width: 78px;
+						text-align:right;
+					}
+					.type{
+						display: inline-block;
+						a{
+							margin-left: 30px;
+							color: #999;
+						}
+					}
+				}
+			}
+			.change-two{
+				width: 100%;
+				padding-top: 25px;
+				padding-bottom: 29px;
+				background:url(/images/31.png) no-repeat 0 25px;
+				border-bottom:1px dashed #ddd;
+				.w-type{
+					margin-left: 105px;
+					margin-top:10px;
+					font-size:13px;
+					height: 13px;
+					.w-type-main{
+						color:#555;
+						display:inline-block;
+						width: 78px;
+						text-align:right;
+					}
+					.type{
+						display: inline-block;
+						a{
+							margin-left: 30px;
+							color: #999;
+						}
+					}
+				}
+				.w-type-only{
+					margin-left: 105px;
+					margin-top:29px;
+					font-size:13px;
+					height: 13px;
+					.w-type-main{
+						color:#555;
+						display:inline-block;
+						width: 78px;
+						text-align:right;
+					}
+					.type{
+						display: inline-block;
+						a{
+							margin-left: 30px;
+							color: #999;
+						}
+					}
+				}
+			}
+			.change-three{
+				width: 100%;
+				padding-top: 25px;
+				padding-bottom: 29px;
+				background:url(/images/32.png) no-repeat 0 25px;
+				.w-type{
+					margin-left: 105px;
+					margin-top:10px;
+					font-size:13px;
+					height: 13px;
+					.w-type-main{
+						color:#555;
+						display:inline-block;
+						width: 78px;
+						text-align:right;
+					}
+					.type{
+						display: inline-block;
+						a{
+							margin-left: 30px;
+							color: #999;
+						}
+					}
+				}
+				.w-type-only{
+					margin-left: 105px;
+					margin-top:29px;
+					font-size:13px;
+					height: 13px;
+					.w-type-main{
+						color:#555;
+						display:inline-block;
+						width: 78px;
+						text-align:right;
+					}
+					.type{
+						display: inline-block;
+						a{
+							margin-left: 30px;
+							color: #999;
+						}
+					}
+				}
+			}
+		}
+	}
+	}
+	/* 价格或其他排序 */
+	.pri-sort{
+		width: 100%;
+		background-color: #f6f6f6;
+		.pri-sort-wrap{
+			width: $width;
+			height: 48px;
+			margin: 0 auto;
+			background: #fafafa;
+			display:flex;
+			justify-content:space-around;
+			align-items:center;
+			font-size:13px;
+		}
+	}
+	.pri-sort span{
+		color: #888;
+	}
+	.pri-sort a{
+		color: #000;
+		padding-left: 17px;
+	}
+	.pri-sort a.ac{
+		color: #ff4466;
+	}
+	.pri-sort  a:hover{color: red;}
+	.pri-sort-right i{
+		float: left;
+		height: 15px;
+		width: 15px;
+		background: url(/images/6.png) no-repeat -145px -180px;
+		
+	}
+	.pri-sort-right i.ac{;
+		background: url(/images/6.png) no-repeat -126px -180px;
+		
+	}
+	.pri-sort-right a{
+		float: left;
+	}
+	
+	

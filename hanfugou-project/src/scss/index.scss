@@ -1,0 +1,306 @@
+/* 写的是主页的组合样式 */
+/* 引入主页要用的样式 */
+@import "./component/header.scss";
+@import "./component/footer.scss";
+@import "./component/style.scss";
+
+
+//写的是主页的组合样式
+//banner的样式
+.start-banner{
+	width: 100%;
+	background-color: #f6f6f6;
+	.banner-wrap{
+		width: 1100px;
+		height: 400px;
+		margin:0 auto;
+		padding-top: 20px;
+		position: relative;
+		.banner-img{
+			width: 1100px;
+			height: 400px;
+			position: relative;
+			li{
+				width: 1100px;
+				height: 400px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				
+			}
+		}
+		 .btm-but{
+			 height: 4px;
+			width: 160PX;
+			 position: absolute;
+			 left: 0;
+			 right: 0;
+			 bottom: 15px;
+			 margin: auto;
+			 z-index: 6;
+			 li{
+				 float: left;
+				 height: 10px;
+				 width: 30PX;
+				 background-color: #dddddd;
+				 margin-left: 3px;
+			 }
+		 }
+	}
+}
+.start-banner .banner-wrap .btm-but .ac{background: red;}
+.banner-wrap .banner-img li{
+	z-index: 0;
+	opacity: 0;
+}
+.banner-wrap .banner-img .ac{
+	z-index: 5;
+	opacity: 1;
+}
+.banner-img li img{
+	height: 100%;
+	width: 100%;
+}
+.banner-wrap .banner-prev{
+	position: absolute;
+	width: 28px;
+	height: 50px;
+	background: url(/images/8.png) no-repeat 0px -35px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 6;
+}
+.banner-wrap .banner-next{
+	position: absolute;
+	width: 28px;
+	height: 50px;
+	background: url(/images/8.png) no-repeat -35px -35px;
+	z-index: 6;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+/* main内容 热卖 */
+$width:1100px;
+.main-hot-sale{
+	width: 100%;
+	background-color: #f6f6f6;
+}
+.main-wrap-hot{
+	width: $width;
+	height: 900px;
+	margin: 0 auto;
+	p{
+		height: 122px;
+		text-align: center;
+		line-height: 122px;
+		color: #8b8b8b;
+		font-size: 28px;
+	}
+	ul{
+		height: 778px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+		li{
+			width: 248px;
+			height: 371px;
+			border: 1px solid red;
+			background: #fff;
+		}
+	}
+}
+.main-wrap-hot li img{
+	width: 248px;
+	height: 248px;
+}
+.main-wrap-hot li div{
+	height: 26px;
+	margin-top: -23px;
+	margin-left: 13px;
+	p{
+		height: 26px;
+		display: inline-block;
+		color: #ff4466;
+		font-size:18px ;
+	}
+}
+.main-wrap-hot li div .price{font-size:34px ;margin-left: 3px;}
+.main-wrap-hot li .direc{
+	font-size: 12px;
+	color: #555;
+	margin-left: 21px;
+	display: block;
+	quotes: 200px;
+	margin-top: 60px;
+	line-height: 20px;
+}
+//汉服男装
+.main-men-cloth{
+	width: 100%;
+	background-color: #f6f6f6;
+}
+.main-wrap-men{
+	width: $width;
+	height: 900px;
+	margin: 0 auto;
+	p{
+		height: 122px;
+		text-align: center;
+		line-height: 122px;
+		color: #8b8b8b;
+		font-size: 28px;
+	}
+	ul{
+		height: 778px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+		li{
+			width: 248px;
+			height: 371px;
+			border: 1px solid red;
+			background: #fff;
+		}
+	}
+}
+.main-wrap-men li img{
+	width: 248px;
+	height: 248px;
+}
+.main-wrap-men li div{
+	height: 26px;
+	margin-top: -23px;
+	margin-left: 13px;
+	p{
+		height: 26px;
+		display: inline-block;
+		color: #ff4466;
+		font-size:18px ;
+	}
+}
+.main-wrap-men li div .price{font-size:34px ;margin-left: 3px;}
+.main-wrap-men li .direc{
+	font-size: 12px;
+	color: #555;
+	margin-left: 21px;
+	display: block;
+	quotes: 200px;
+	margin-top: 60px;
+	line-height: 20px;
+}
+/* APP下载 */
+.app-download{
+	width: 100%;
+	background-color: #f6f6f6;
+	padding-top: 35px;
+}
+.app-download img{
+	width: $width;
+	height: 160px;
+	display: block;
+	margin: 0 auto;
+}
+/* 周边配饰 */
+.main-decorate{
+	width: 100%;
+	background-color: #f6f6f6;
+}
+.main-wrap-decorate{
+	width: $width;
+	height: 900px;
+	margin: 0 auto;
+	p{
+		height: 122px;
+		text-align: center;
+		line-height: 122px;
+		color: #8b8b8b;
+		font-size: 28px;
+	}
+	ul{
+		height: 778px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+		li{
+			width: 248px;
+			height: 371px;
+			border: 1px solid red;
+			background: #fff;
+		}
+	}
+}
+.main-wrap-decorate li img{
+	width: 248px;
+	height: 248px;
+}
+.main-wrap-decorate li div{
+	height: 26px;
+	margin-top: -23px;
+	margin-left: 13px;
+	p{
+		height: 26px;
+		display: inline-block;
+		color: #ff4466;
+		font-size:18px ;
+	}
+}
+.main-wrap-decorate li div .price{font-size:34px ;margin-left: 3px;}
+.main-wrap-decorate li .direc{
+	font-size: 12px;
+	color: #555;
+	margin-left: 21px;
+	display: block;
+	quotes: 200px;
+	margin-top: 60px;
+	line-height: 20px;
+}
+/* 热门品牌 */
+.main-hot-brand{
+	width: 100%;
+	background-color: #f6f6f6;
+}
+.main-wrap-hot-brand{
+	width: $width;
+	height: 495px;
+	margin: 0 auto;
+	p{
+		height: 122px;
+		text-align: center;
+		line-height: 122px;
+		color: #8b8b8b;
+		font-size: 28px;
+	}
+	ul{
+		height: 285px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+		li{
+			width: 181px;
+			height: 141px;
+			background: #fff;
+			position: relative;
+			img{
+				width: 141px;
+				height: 50px;
+			}
+		}
+	}
+}
+.main-wrap-hot-brand li img{
+	width: 248px;
+	height: 248px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
