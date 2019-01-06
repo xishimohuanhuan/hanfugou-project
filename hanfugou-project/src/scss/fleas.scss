@@ -1,0 +1,379 @@
+
+/* 引入主页要用的样式 */
+@import "./component/header.scss";
+@import "./component/footer.scss";
+@import "./component/style.scss";
+
+/* 写fleas页面*/
+body{background: #f6f6f6;}
+$width:1100px;
+.main-fleas-hot{
+	width: 100%;
+	.main-fleas-hot-wrap{
+		width: $width;
+		height: 1112px;
+		margin: 0 auto;
+		margin-top: 23px;
+		.hot-title{
+			height: 65px;
+			line-height: 65px;
+			font-size: 18px;
+			color: #888;
+		}
+		.main-fleas-list{
+			width: 100%;
+			height: 1052px;
+			background: #fff;
+			overflow: hidden;
+			.main-list-wr{
+				width: 1040px;
+				margin: 0 auto;
+				/* border:1px solid red; */
+				.main-fleas-list-one{
+				width: 100%;
+				height: 320px;
+				border-bottom: 1px #dcdcdc dashed;
+				.list-wra{
+					margin-top: 32px;
+					.list-name{
+						width: 127px;
+						height: 289px;
+						border-right: 1px solid #f3f3f3;
+						float:left;
+						a{
+							display: block;
+							margin: 0 auto;
+							width: 70px;
+							img{
+								width: 70px;
+								height: 70px;
+							}
+						}
+						.sangp-name{
+							display: block;
+							width: 106px;
+							font-size: 16px;
+							color: #555;
+							text-align: center;
+							margin-top: 10px;
+							&:hover{color: red;}
+						}
+						p{
+							font-size: 14px;
+							color: #555;
+							text-align: center;
+							margin-top: 15px;
+							span{
+								color: #ff4466;
+								font-size: 24px;
+							}
+						}
+					}
+					}
+					ul{
+						width: 885px;
+						height: 289px;
+						float: right;
+						margin-left: 19px;
+						display: flex;
+						justify-content: space-between;
+						li{
+							width: 200px;
+							height: 289px;
+							a{
+								img{
+									width: 200px;
+									height: 200px;
+								}
+							}
+							p{
+								color: #ff4466;
+								font-size: 22px;
+								font-weight: 600;
+								text-align: center;
+								margin-top: 7px;
+								margin-bottom: 9px;
+							}
+							.xians{
+								color: #555;
+								font-size: 13px;
+								line-height: 21px;
+								&:hover{color: red;}
+							}
+						}
+					}
+				}
+			.main-fleas-list-two{
+				width: 100%;
+				height: 320px;
+				border-bottom: 1px #dcdcdc dashed;
+				.list-wra{
+					margin-top: 32px;
+					.list-name{
+						width: 127px;
+						height: 289px;
+						border-right: 1px solid #f3f3f3;
+						float:left;
+						a{
+							display: block;
+							margin: 0 auto;
+							width: 70px;
+							img{
+								width: 70px;
+								height: 70px;
+							}
+						}
+						.sangp-name{
+							display: block;
+							width: 106px;
+							font-size: 16px;
+							color: #555;
+							text-align: center;
+							margin-top: 10px;
+							&:hover{color: red;}
+						}
+						p{
+							font-size: 14px;
+							color: #555;
+							text-align: center;
+							margin-top: 15px;
+							span{
+								color: #ff4466;
+								font-size: 24px;
+							}
+						}
+					}
+					}
+					ul{
+						width: 885px;
+						height: 289px;
+						float: right;
+						margin-left: 19px;
+						display: flex;
+						justify-content: space-between;
+						li{
+							width: 200px;
+							height: 289px;
+							a{
+								img{
+									width: 200px;
+									height: 200px;
+								}
+							}
+							p{
+								color: #ff4466;
+								font-size: 22px;
+								font-weight: 600;
+								text-align: center;
+								margin-top: 7px;
+								margin-bottom: 9px;
+							}
+							.xians{
+								color: #555;
+								font-size: 13px;
+								line-height: 21px;
+								&:hover{color: red;}
+							}
+						}
+					}
+				
+			}
+			.main-fleas-list-three{
+				width: 100%;
+				height: 320px;
+				.list-wra{
+					margin-top: 32px;
+					.list-name{
+						width: 127px;
+						height: 289px;
+						border-right: 1px solid #f3f3f3;
+						float:left;
+						a{
+							display: block;
+							margin: 0 auto;
+							width: 70px;
+							img{
+								width: 70px;
+								height: 70px;
+							}
+						}
+						.sangp-name{
+							display: block;
+							width: 106px;
+							font-size: 16px;
+							color: #555;
+							text-align: center;
+							margin-top: 10px;
+							&:hover{color: red;}
+						}
+						p{
+							font-size: 14px;
+							color: #555;
+							text-align: center;
+							margin-top: 15px;
+							span{
+								color: #ff4466;
+								font-size: 24px;
+							}
+						}
+					}
+					}
+					ul{
+						width: 885px;
+						height: 289px;
+						float: right;
+						margin-left: 19px;
+						display: flex;
+						justify-content: space-between;
+						li{
+							width: 200px;
+							height: 289px;
+							border: 1px solid red;
+							a{
+								img{
+									width: 200px;
+									height: 200px;
+								}
+							}
+							p{
+								color: #ff4466;
+								font-size: 22px;
+								font-weight: 600;
+								text-align: center;
+								margin-top: 7px;
+								margin-bottom: 9px;
+							}
+							.xians{
+								color: #555;
+								font-size: 13px;
+								line-height: 21px;
+								&:hover{color: red;}
+							}
+						}
+					}
+			}
+			}
+			
+		}
+	}
+}
+
+/* 白菜商家 */
+.cheap{
+	width: 100%;
+	margin-top: 23px;
+	.cheap-wrap{
+		width: $width;
+		height: 210px;
+		margin: 0 auto;
+		.cheap-title{
+			height: 64px;
+			color: #888;
+			font-size: 18px;
+			line-height: 64px;
+		}
+		ul{
+			height: 146px;
+			background: #fff;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			li{
+				width: 11.11%;
+				height: 95px;
+				border: 1px solid red;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				a{
+					color:#555;
+					font-size: 13px;
+					img{
+						width: 70px;
+						height: 70px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 中档消费 */
+.mid{
+	width: 100%;
+	margin-top: 23px;
+	.mid-wrap{
+		width: $width;
+		height: 210px;
+		margin: 0 auto;
+		.mid-title{
+			height: 64px;
+			color: #888;
+			font-size: 18px;
+			line-height: 64px;
+		}
+		ul{
+			height: 146px;
+			background: #fff;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			li{
+				width: 11.11%;
+				height: 95px;
+				border: 1px solid red;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				a{
+					color:#555;
+					font-size: 13px;
+					img{
+						width: 70px;
+						height: 70px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 高档定制 */
+.high{
+	width: 100%;
+	margin-top: 23px;
+	.high-wrap{
+		width: $width;
+		height: 210px;
+		margin: 0 auto;
+		.high-title{
+			height: 64px;
+			color: #888;
+			font-size: 18px;
+			line-height: 64px;
+		}
+		ul{
+			height: 146px;
+			background: #fff;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			li{
+				width: 11.11%;
+				height: 95px;
+				border: 1px solid red;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				a{
+					color:#555;
+					font-size: 13px;
+					img{
+						width: 70px;
+						height: 70px;
+					}
+				}
+			}
+		}
+	}
+}

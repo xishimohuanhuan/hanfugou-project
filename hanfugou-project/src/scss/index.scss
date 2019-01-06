@@ -26,7 +26,6 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				
 			}
 		}
 		 .btm-but{
@@ -137,6 +136,7 @@ $width:1100px;
 	quotes: 200px;
 	margin-top: 60px;
 	line-height: 20px;
+	&:hover{color: red;}
 }
 //汉服男装
 .main-men-cloth{

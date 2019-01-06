@@ -23,10 +23,11 @@ define(["jquery"],()=>{
 				/* alert($(this).html()); */
 				$("#nav-li").on("click","a",function(e){
 					$("#nav-li li a").each(function(i,item){
-						$(item).removeClass("a-hov");
+						let a=$(item).removeClass("a-hov").css("href");
+						/* console.log(a); */
 					})
 					$(this).addClass("a-hov");
-					e.preventDefault();
+					/* e.preventDefault(); */
 				})
 		}
 	}

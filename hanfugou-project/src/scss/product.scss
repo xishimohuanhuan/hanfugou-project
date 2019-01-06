@@ -201,3 +201,63 @@ $width:1100px;
 	}
 	
 	
+	/* product 的商品列表 */
+	.product-list{
+		width: 100%;
+		background-color: #f6f6f6;
+		padding-top: 6px;
+		.product-list-wrap{
+			width: $width;
+			height: 1586px;
+			margin: 0 auto;
+			ul{
+				width: $width;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				li{
+					width: 248px;
+					height: 356px;
+					margin-top: 36px;
+				}
+			}
+		}
+	}
+	.product-list-wrap ul li img{
+		width: 248px;
+		height: 248px;
+	}
+	ul li .list-message{
+		height: 86px;
+		width: 218px;
+		margin-left: 14px;
+		margin-top: 15px;
+		.list-price{
+			color: #ff4466;
+			font-size: 22px;
+			height: 22px;
+			margin-left: 3px;
+		}
+		p{
+			height: 13px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			.list-intr{
+				color: #555;
+				font-size: 13px;
+				&:hover{color: red;}
+			}
+		}
+		.list-merc{
+			
+			font-size: 12px;
+			color: #aaa;
+			&:hover{color: red;}
+			text-decoration: underline;
+		}
+	}
+	$color:#fff;
+	.product-list-wrap li{
+		background: $color;
+		&:hover{background: darken($color,2%);}
+	}
