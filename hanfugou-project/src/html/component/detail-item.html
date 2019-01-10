@@ -1,0 +1,37 @@
+
+<script type="text/html" id="dlist-template">
+	{{each list item i}}
+<div class="img-left" id="img-left">
+	<img src="{{item.img}}" >
+	<span></span>
+</div>
+<div class="fangda" id="fangda"><img src="{{item.img}}" ></div>
+<div class="right-dat">
+	
+	<div class="deta-ri-title" id="deta-ri-title">{{item.title}}</div>
+	<div class="deta-price">
+		<div class="deta-qian"><i>￥</i><span id="data-pira">{{item.price}}</span></div>
+		<div class="deta-math">交易成功：<span>{{item.num}}</span></div>
+	</div>
+	<div class="deta-box">
+		<div class="box-exp">邮费<span>配送至 北京 包邮</span></div>
+		<div class="box-size" id="box-size">
+			<span>尺码</span>
+			<ul>
+				<li>M</li>
+				<li>S</li>
+			</ul>
+		</div>
+		<div class="box-style"><i>样式</i><span><img src="{{item.img}}" ></span></div>
+		<div class="box-much"><span>数量</span>
+			<div class="aa-inp" id="aa-inp">
+				<a href="##" class="aa1" id="aaja">-</a>
+				<input type="text" value="1"/>
+				<a href="##" id="aajia">+</a>
+			</div>
+		</div>
+		<div class="box-gouwu"><a href="##" class="live-st">立即剁手</a><a href="##" class="add"><i></i><span>加入购物车</span></a></div>
+	</div>
+</div>
+{{/each}}
+</script>

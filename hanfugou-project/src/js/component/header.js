@@ -1,5 +1,5 @@
 //写头部的js
-define(["jquery"],()=>{
+define(["jquery","cookie"],()=>{
 	//写header的功能
 	class Header{
 		constructor() {
@@ -15,7 +15,9 @@ define(["jquery"],()=>{
 				resolve();
 			})
 		}).then(()=>{
+				this.login();
 				this.nav();
+				this.exit();
 			});
 			
 		}
@@ -29,6 +31,24 @@ define(["jquery"],()=>{
 					$(this).addClass("a-hov");
 					/* e.preventDefault(); */
 				})
+		}
+		/* 判断是否登录 */
+		login(){
+			if($.cookie("username")){
+				$("#name").html("您好:"+$.cookie("username"));
+				$("#tuic").html("退出");
+				$("#tuic")[0].href="/";
+				
+			}
+		}
+		//退出
+		exit(){
+			$("#tuic").on("click",function(){
+				if(confirm("确定退出？")){
+					$.cookie("username","",{expires:-1,path: "/"});
+					location.href="/";
+				}
+			})
 		}
 	}
 	return new Header;//返回到

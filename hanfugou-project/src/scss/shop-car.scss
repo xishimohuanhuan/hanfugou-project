@@ -1,0 +1,202 @@
+/* 引入主页要用的样式 */
+@import "./component/header.scss";
+@import "./component/footer.scss";
+@import "./component/style.scss";
+
+/* 写购物车 */
+$width:1100px;
+.car{
+	width: 100%;
+	.car-wrap{
+		
+		width: $width;
+		margin: 0 auto;
+		.car-start{
+			margin-top:20px;
+			color: #666;
+			height: 44px;
+			width: 100%;
+			background: #f3f3f3;
+			div{float:left;}
+			.box1{
+				margin-top: 15px;
+				margin-left: 12px;
+				width: 85px;
+				label{
+					height: 44px;
+				}
+			}
+			.box2{
+				width: 450px;
+				line-height: 44px;
+			}
+			.box3{
+				width: 150px;
+				line-height: 44px;
+			}
+			.box4{
+				width: 150px;
+				line-height: 44px;
+			}
+			.box5{
+				width: 130px;
+				line-height: 44px;
+			}
+			.box6{
+				width: 100px;
+				line-height: 44px;
+			}
+		}
+	}
+}
+
+.car-aad{
+	border: 1px solid #f0f0f0;
+	height: 50px;
+	margin-top: 10px;
+	.add-price{
+		float: right;
+		a{
+			display: inline-block;
+			width: 99px;
+			height: 49px;
+			background: #e54346;
+			line-height: 49px;
+			text-align: center;
+			font-size: 18px;
+			color: #fff;
+			font-weight: 600;
+		}
+	}
+	.car-close{
+		
+		float: right;
+		width: 200px;
+		.total{
+			color: #999;
+		}
+		.total-price{
+			height: 50px;
+			width: 125px;
+			/* border: 1px solid red; */
+			display: inline-block;
+			color: #E2231A;
+			font-size: 18px;
+			font-weight:600;
+			line-height: 50px;
+		}
+	}
+}
+.car-shop{
+	.car-wrap{
+		height: 120px;
+		width: $width;
+		background: #fff4e8;
+		margin-top: 5px;
+		.car-box1{
+			width: 50px;
+			height: 120px;
+			
+			float:left;
+			input{
+				margin-top: 50px;
+				margin-left: 10px;
+			}
+		}
+		.car-box2{
+			
+			width: 450px;
+			height: 120px;
+			float: left;
+			img{
+				
+				height: 83px;
+				width: 83px;
+				margin-top: 15px;
+				float: left;
+			}
+			.car-title{
+				float: left;
+				height: 100px;
+				width: 200px;
+				margin-top: 20px;
+				margin-left: 20px;
+				a{
+					color: #999;
+					&:hover{color: red;}
+				}
+			}
+			.car-siz{
+				float: left;
+				width:50px;
+				height: 70px;
+				margin-top: 50px;
+				margin-left: 20px;
+				color: #999;
+				font-size: 19px;
+			}
+		}
+		.car-box3{
+			float: left;
+			height:120px;
+			width: 150px;
+			line-height: 120px;
+			color: #000000;
+			font-size: 19px;
+		}
+		.car-box4{
+			
+			float: left;
+			height: 120px;
+			.aa-inp{
+				float: left;
+				height: 28px;
+				margin-top: 50px;
+				a{
+					color: #ccc;
+					display: inline-block;
+					width: 26px;
+					height: 26px;
+					background: #ededed;
+					font-size: 26px;
+					font-weight: bold;
+					text-align: center;
+					line-height: 26px;
+					border: 1px solid #ccc;
+					float: left;
+				}
+				input{
+					height: 26px;
+					width: 60px;
+					float: left;
+					font-size: 12px;
+					line-height: 28px;
+					border: none;
+					border-bottom: 1px #ccc solid;
+					border-top:1px #ccc solid ;
+					text-align: center;
+					color: #555;
+					outline: none;
+				}
+			}
+		}
+		.car-box5{
+			
+			float: left;
+			height: 120px;
+			width: 170px;
+			text-align: center;
+			line-height: 120px;
+		}
+		.car-box6{
+			float: left;
+			height: 120px;
+			width: 150px;
+			text-align: center;
+			line-height: 120px;
+			a{
+				&:hover{color: red;}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+/* 登录页面 */
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+li{list-style: none;}
+body{background: #f6f6f6;}
+header{
+	background-color: #ff4466;
+	width: 100%;
+	.wrap{
+		width: 1100px;margin: -20px auto;height: 70px;
+		h1{
+			a{
+				width: 280px;
+				height: 30px;
+				background: url(/images/6.png) no-repeat 0 0;
+				margin-top: 20px;
+				float: left;
+			}
+		}
+	}
+}
+.container{
+	background: #fff;
+	width: 450px;
+	height:450px;
+	margin: 50px auto;
+}
