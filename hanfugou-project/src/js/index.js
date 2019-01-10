@@ -54,7 +54,7 @@ require(["./requirejs.config"],()=>{//首先引入模块的配置文件
 				//开个定时器
 				timer(){
 					let timer = null;
-						$("#banner-img").hover(function(){
+						$("#banner-wrap").hover(function(){
 							clearInterval(timer);
 						}, (function autoPlay(){
 							timer = setInterval(() => {
@@ -72,6 +72,17 @@ require(["./requirejs.config"],()=>{//首先引入模块的配置文件
 		/* 本周热卖 */
 		item.init(url.baseUrlRap+"/ind-ite");
 		
+		$.ajax({
+			url:url.baseUrlRap+"/detail-item",
+			type:"get",
+			success:function(res){
+				if(res.res_code===1){
+					let list =res.res_body.data;
+					$(".main-wrap-hot-brand li img").attr("src",list.img);
+					
+				}
+			}
+		})
 		
 		
 	});

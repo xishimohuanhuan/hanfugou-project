@@ -5,7 +5,7 @@ define(["jquery","template"],($,template)=>{
 	}
 	Item.prototype.init=function(url){
 		/* init不能直接在这里调，他没有写死后面需要渲染要请求了后才调 */
-		console.log(url);
+		/* console.log(url); */
 		//load
 		new Promise((resolve,reject)=>{
 			$("#ind-itep").load("/html/component/ind-item.html",()=>{

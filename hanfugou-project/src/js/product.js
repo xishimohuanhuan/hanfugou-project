@@ -1,10 +1,8 @@
 /* 写萌物库 */
 require(["./requirejs.config"],function(){
 	//引入需要依赖的模块
-	require(["jquery","header","footer"],function(){
+	require(["product-item","url","jquery","header","footer"],function(item,url){
 		$(function(){
-			
-			
 			/* 价格或其他排序 */
 			function Sort(){
 				this.index=1;
@@ -40,6 +38,8 @@ require(["./requirejs.config"],function(){
 				
 			}
 			new Sort();
+			
+			item.init(url.baseUrlRap+"/product-item");
 		})
 	})
 })

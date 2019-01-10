@@ -10,7 +10,8 @@ require.config({
 		"url":"js/component/url",
 		"template":"libs/template-web",
 		"ind-item":"js/component/ind-item",
-		"detail-item":"js/component/detail-item"
+		"detail-item":"js/component/detail-item",
+		"product-item":"js/component/product-item"
 	},
 	//不符合AMD规范的模块要垫片
 	shim:{

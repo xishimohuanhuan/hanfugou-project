@@ -8,7 +8,6 @@ require(["./requirejs.config"],function(){
 				constructor() {
 				    this.init();
 					this.move();
-					
 				}
 				init(){
 					let _this=this;
@@ -26,16 +25,16 @@ require(["./requirejs.config"],function(){
 					$("#img-left").on("mousemove",function(e){
 						e=e||window.event;
 						let gudBox=$("#img-left"),
-						           Fdj=$("#img-left span"),
-						           bigImg=$("#fangda img");
+							 Fdj=$("#img-left span"),
+							 bigImg=$("#fangda img");
 						var left = e.clientX - gudBox.offset().left-Fdj.outerWidth()/2;
 						var top = e.clientY - gudBox.offset().top-Fdj.outerHeight()/2+$(window).scrollTop();
+						/* 判断边界 */
 						if(left<0) left=0;
 						if(top<0) top=0;
-						if(left>gudBox.outerWidth()-Fdj.outerWidth())
-						left=gudBox.outerWidth()-Fdj.outerWidth();
-						if(top>gudBox.outerHeight()-Fdj.outerHeight())
-						top=gudBox.outerHeight()-Fdj.outerHeight();
+						if(left>gudBox.outerWidth()-Fdj.outerWidth()) left=gudBox.outerWidth()-Fdj.outerWidth();
+						if(top>gudBox.outerHeight()-Fdj.outerHeight()) top=gudBox.outerHeight()-Fdj.outerHeight();
+						
 						Fdj.css({"left":left,"top":top});
 						bigImg.css({"left":-1*left,"top":-1*top});
 					})
@@ -91,7 +90,7 @@ require(["./requirejs.config"],function(){
 							aar.push(obj);
 						}
 						$.cookie("dataname",JSON.stringify(aar),{path:"/"});
-						console.log($.cookie("dataname"));
+						/* console.log($.cookie("dataname")); */
 					}
 				}
 				much(){
@@ -118,7 +117,7 @@ require(["./requirejs.config"],function(){
 						let arrsearch = location.search.slice(1).split("=");
 						addcookie(arrsearch[1],Number($("#aa-inp input").val()));
 					})
-					
+					/* 封装的存cookie 方法*/
 					var addcookie=function(idd,numm){
 						let bbj={};
 						bbj.id=idd;
@@ -141,7 +140,7 @@ require(["./requirejs.config"],function(){
 							aarr.push(bbj);
 						}
 						$.cookie("dataname",JSON.stringify(aarr),{path:"/"});
-						console.log($.cookie("dataname")); 
+						/* console.log($.cookie("dataname")); */
 					}
 				}
 				
@@ -151,54 +150,37 @@ require(["./requirejs.config"],function(){
 					var ojj={};
 					
 					$("#addta").on("click",()=>{
-						var flagt=true;
-						console.log($.cookie("dataname"));
-						if($.cookie("dataname")){
-							aab=JSON.parse($.cookie("dataname"));
-							/* let cook=JSON.parse($.cookie("dataname"));
-							for(let j=0;j<cook.length;j++){
-								let arrsearch = location.search.slice(1).split("=");
-								
-								if(cook[j].id==arrsearch[1]){
-									if(confirm("是否进入购物车")){
-										Window.Location.href="/html/tab.html";
-									}
-								}else{
-									confirm("请选择size");
-								}
-							} */
-						}else{
-							confirm("请选择size");
-							flagt=false;
-						}
-						for(let j=0;j<aab.length;j++){
-							/* let arrsearch = location.search.slice(1).split("="); */
-							let arrsearch = location.search.slice(1).split("="); //得到location中search的id值 返回数组
-							console.log(arrsearch[1]);
-							if(arrsearch[1]==aab[j].id && aab[j].size){
-								aab[j].flag=true;
+						if(confirm("是否加入购物车")){
+							var flagt=true;
+							/* console.log($.cookie("dataname")); */
+							if($.cookie("dataname")){
+								aab=JSON.parse($.cookie("dataname"));
+							}else{
+								confirm("请选择size");
 								flagt=false;
 							}
+							for(let j=0;j<aab.length;j++){
+								let arrsearch = location.search.slice(1).split("="); //得到location中search的id值 返回数组
+								if(arrsearch[1]==aab[j].id && aab[j].size){
+									/* if() */
+									aab[j].flag=true;
+									flagt=false;
+								}
+							}
+							if(flagt){
+								confirm("加size");
+							}
+							$.cookie("dataname",JSON.stringify(aab),{path:"/"});
+							/* console.log($.cookie("dataname")); */
+							new Numshop();
 						}
-						if(flagt){
-							confirm("加size");
-						}
-						$.cookie("dataname",JSON.stringify(aab),{path:"/"});
-						console.log($.cookie("dataname")); 
 						
 					})
 				}
 				
-				/* addtab(){
-					$("#addta").on("click",function(){
-						alert(22);
-					})
-				} */
-				
 			}
 			new Tab();
 			/* 请求数据 */
-			/* url.baseUrlRap+"/detail-item" */
 			$.ajax({
 				url:url.baseUrlRap+"/detail-item",
 				type:"get",
@@ -216,7 +198,28 @@ require(["./requirejs.config"],function(){
 				}
 			})
 		
-			
+			/* 判断购物车的商品数量 */
+			class Numshop{
+				constructor() {
+				    this.init();
+				}
+				init(){
+					/* console.log($("#tab-car-nu")); */
+					let inde=0;
+					if($.cookie("dataname")){
+						var datat=JSON.parse($.cookie("dataname"));
+						/* console.log(datat); */
+						$(datat).each(function(i,item){
+							if(item.flag){
+								inde++;
+							}
+						})
+					}
+					/* console.log(inde); */
+					$("#tab-car-nu").html(inde);
+				}
+			}
+			new Numshop();
 			
 		})
 		})
