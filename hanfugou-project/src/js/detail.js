@@ -36,7 +36,7 @@ require(["./requirejs.config"],function(){
 						if(top>gudBox.outerHeight()-Fdj.outerHeight()) top=gudBox.outerHeight()-Fdj.outerHeight();
 						
 						Fdj.css({"left":left,"top":top});
-						bigImg.css({"left":-1*left,"top":-1*top});
+						bigImg.css({"left":-2.5*left,"top":-2.5*top});
 					})
 				}
 			}
@@ -122,13 +122,13 @@ require(["./requirejs.config"],function(){
 						let bbj={};
 						bbj.id=idd;
 						bbj.num=numm;
-						console.log(bbj);
+						/* console.log(bbj); */
 						if($.cookie("dataname")){
 							aarr=JSON.parse($.cookie("dataname"));
 						}else{
 							aarr=[];
 						}
-						console.log(bbj,aarr);
+						/* console.log(bbj,aarr); */
 						for(let j=0;j<aarr.length;j++){
 							if(aarr[j].id==bbj.id){
 								aarr[j].id=bbj.id;
@@ -174,10 +174,8 @@ require(["./requirejs.config"],function(){
 							/* console.log($.cookie("dataname")); */
 							new Numshop();
 						}
-						
 					})
 				}
-				
 			}
 			new Tab();
 			/* 请求数据 */
@@ -220,6 +218,18 @@ require(["./requirejs.config"],function(){
 				}
 			}
 			new Numshop();
+			
+			/* 吸顶效果 */
+			class Topshow{
+				constructor(){
+				    this.init();
+					
+				}
+				init(){
+					
+				}
+			}
+			new Topshow();
 			
 		})
 		})

@@ -3,7 +3,6 @@ define(["jquery","cookie"],()=>{
 	//写header的功能
 	class Header{
 		constructor() {
-			
 		    this.init();
 		}
 		init(){//初始化 加载header.html
@@ -19,24 +18,12 @@ define(["jquery","cookie"],()=>{
 			});
 		}
 		nav(){
-				
-				/* if(n){
-					console.log(n); */
-						/* $("#nav-li li a").each(function(i,item){
-							$(item).removeClass("a-hov").css("href");
-						}) */
-					/* $("#nav-li li").eq(n).children().addClass("a-hov"); */
-					/* console.log($("#nav-li")[0]); */
-				/* }else{
-					console.log(3); */
-					$("#nav-li").on("click","a",function(e){
-						$("#nav-li li a").each(function(i,item){
-							let a=$(item).removeClass("a-hov").css("href");
-						})
-						$(this).addClass("a-hov");
-					})
-				/* } */
-				
+			$("#nav-li").on("click","a",function(e){
+				$("#nav-li li a").each(function(i,item){
+					let a=$(item).removeClass("a-hov").css("href");
+				})
+				$(this).addClass("a-hov");
+			})
 		}
 		/* 判断是否登录 */
 		login(){

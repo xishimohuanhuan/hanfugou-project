@@ -13,6 +13,7 @@ require(["./requirejs.config"],()=>{//首先引入模块的配置文件
 					this.mintotal();
 					this.addzong();
 					this.clear();
+					
 				}
 				init(){
 					let str="";
@@ -33,7 +34,7 @@ require(["./requirejs.config"],()=>{//首先引入模块的配置文件
 									<div class="car-box4">
 										<div class="aa-inp" data-idd=${item.id}>
 											<a href="##" class="aa1" >-</a>
-											<input type="text" value="${item.num}"/>
+											<input class="updainp" data-idd=${item.id} type="text" value="${item.num}"/>
 											<a href="##" class="aa2">+</a>
 										</div>
 									</div>
@@ -48,6 +49,7 @@ require(["./requirejs.config"],()=>{//首先引入模块的配置文件
 						}
 					})
 					$("#car-shop").html(str);
+					this.update();
 				}
 				/* 加加减减 */
 				addsub(){
@@ -89,6 +91,32 @@ require(["./requirejs.config"],()=>{//首先引入模块的配置文件
 						$.cookie("dataname",JSON.stringify(_this.cookIe),{path:"/"});
 						_this.addzong();
 					}
+				}
+				/* 当手动输入数量的时候 */
+				update(){
+					let _this=this;
+					/* input框失去焦点 */
+					$("#car-shop .updainp").on("blur",function(){
+						/* 判断输入的内容 */
+						if(parseInt($(this).val()) && parseInt($(this).val())==$(this).val()){
+							
+							let idd=$(this).attr("data-idd")
+							let num=$(this).val();
+							/* 存 cookie*/
+							let inpcook=JSON.parse($.cookie("dataname"));
+							$(inpcook).each((i,item)=>{
+								if(item.id==idd){
+									item.num=num;
+								}
+							})
+							$.cookie("dataname",JSON.stringify(inpcook),{path:"/"});
+							_this.mintotal();
+							_this.addzong();
+						}else{
+							window.location.href="/html/shop-car.html";
+						}
+					})
+					
 				}
 				/* 小计 */
 				mintotal(){
